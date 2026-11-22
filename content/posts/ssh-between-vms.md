@@ -2,7 +2,7 @@
 title: "两台虚拟机之间配置 SSH 免密登录"
 date: 2026-11-05T19:20:00+08:00
 draft: false
-author: "2023902111"
+author: "王文龙"
 categories: ["Linux基础"]
 tags: ["ssh", "virtualbox", "网络"]
 summary: "记录 VirtualBox 里两台 Ubuntu 虚拟机的组网（NAT + 内部网络）、克隆后 IP 冲突的排查，以及 ssh-keygen 与 ssh-copy-id 配免密的完整过程。"

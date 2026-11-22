@@ -2,7 +2,7 @@
 title: "Shell 脚本入门：写一个 one2n"
 date: 2026-11-15T21:05:00+08:00
 draft: false
-author: "2023902111"
+author: "王文龙"
 categories: ["Shell编程"]
 tags: ["bash", "脚本", "循环", "参数校验"]
 summary: "从命令行参数校验、for 循环到退出码，用 30 行 Bash 实现 1+2+…+n，并说清 ./one2n、bash one2n、source one2n 三种执行方式的区别。"

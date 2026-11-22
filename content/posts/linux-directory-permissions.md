@@ -2,7 +2,7 @@
 title: "Linux 目录结构与文件权限"
 date: 2026-11-08T20:10:00+08:00
 draft: false
-author: "2023902111"
+author: "王文龙"
 categories: ["Linux基础"]
 tags: ["linux", "文件系统", "权限"]
 summary: "从根目录 / 开始理解 Linux 的树形目录结构，以及 rwx 权限位在文件和目录上的不同含义。"

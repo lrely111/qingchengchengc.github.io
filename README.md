@@ -1,4 +1,4 @@
-# 王文龙的 Linux 学习博客（Hugo + PaperMod）
+# 我的 Linux 学习博客（Hugo + PaperMod）
 
 课程《Linux基础及应用》结课作业：在 Ubuntu 虚拟机里用 Hugo 搭建个人博客，
 并用 GitHub Pages 做外网托管。

@@ -2,14 +2,14 @@
 title: "关于我"
 date: 2026-11-01T10:00:00+08:00
 draft: false
-author: "2023902111"
+author: "王文龙"
 ShowToc: false
 ShowReadingTime: false
 ShowBreadCrumbs: false
 hideMeta: true
 ---
 
-<img src="/images/avatar.png" alt="个人照片" width="220" style="border-radius:8px">
+<img src="/images/avatar.jpg" alt="个人照片" width="220" style="border-radius:8px">
 
 ## 个人简介
 

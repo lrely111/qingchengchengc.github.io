@@ -2,7 +2,7 @@
 title: "Makefile 实践：从基础版到增强版"
 date: 2026-11-18T20:40:00+08:00
 draft: false
-author: "2023902111"
+author: "王文龙"
 categories: ["构建工具"]
 tags: ["make", "gcc", "编译", "自动化"]
 summary: "用一个 hello 程序，对比基础版、变量版、增强版三个 Makefile，理解目标、依赖、自动变量和 .PHONY 的作用。"

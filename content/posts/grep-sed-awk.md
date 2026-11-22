@@ -2,7 +2,7 @@
 title: "grep、sed、awk：文本处理三剑客"
 date: 2026-11-12T19:30:00+08:00
 draft: false
-author: "2023902111"
+author: "王文龙"
 categories: ["文本处理"]
 tags: ["grep", "sed", "awk", "正则表达式"]
 summary: "用一份 8 行的成绩单，把 grep 找行、sed 改行、awk 按字段统计这三种视角讲清楚，并给出管道组合的实际用法。"
