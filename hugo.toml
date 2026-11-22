@@ -7,7 +7,6 @@ theme = "PaperMod"
 enableRobotsTXT = true
 buildDrafts = false
 buildFuture = false
-disableKinds = ["taxonomyTerm"]
 
 [pagination]
   pagerSize = 5
@@ -20,7 +19,7 @@ disableKinds = ["taxonomyTerm"]
   title = "我的 Linux 学习博客"
   description = "Linux 基础及应用课程学习记录"
   keywords = ["Linux", "Hugo", "PaperMod", "博客"]
-  author = "2023902111"
+  author = "王文龙"
   DateFormat = "2006-01-02"
   defaultTheme = "auto"
   ShowReadingTime = true
@@ -35,8 +34,8 @@ disableKinds = ["taxonomyTerm"]
   TocOpen = false
 
   [params.homeInfoParams]
-    Title = "你好，我是 2023902111 👋"
-    Content = "长安大学 · 测绘工程专业。这里记录《Linux 基础及应用》课程的学习笔记：目录与权限、grep/sed/awk 文本处理、Shell 脚本、Makefile 构建，以及在虚拟机里踩过的坑。"
+    Title = "你好，我是 王文龙 👋"
+    Content = "长安大学 · 日语专业。这里记录《Linux 基础及应用》课程的学习笔记：目录与权限、grep/sed/awk 文本处理、Shell 脚本、Makefile 构建，以及在虚拟机里踩过的坑。"
 
   [[params.socialIcons]]
     name = "github"
@@ -83,3 +82,6 @@ disableKinds = ["taxonomyTerm"]
   name = "搜索"
   url = "/search/"
   weight = 60
+
+[markup.goldmark.renderer]
+  unsafe = true

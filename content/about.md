@@ -9,18 +9,18 @@ ShowBreadCrumbs: false
 hideMeta: true
 ---
 
-![个人照片](/images/avatar.png)
+<img src="/images/avatar.png" alt="个人照片" width="220" style="border-radius:8px">
 
 ## 个人简介
 
-- **姓名**：2023902111（学号，正式提交时替换为真实姓名）
-- **专业**：测绘工程
+- **姓名**：王文龙（学号 2023902111）
+- **专业**：日语
 - **学校**：长安大学
 - **课程**：《Linux 基础及应用》（2026-2027 学年第一学期）
 
 ## 我在学什么
 
-这学期主要在做三件事：
+这学期主要在做三件事（专业课之外选了这门通识课）：
 
 1. 在 VirtualBox 里装两台 Ubuntu 虚拟机并配通 SSH；
 2. 用 grep / sed / awk 处理文本，用 Vim 改文件；
