@@ -7,6 +7,7 @@ on:
 
 permissions:
   contents: write
+  pages: write
 
 concurrency:
   group: "pages"
@@ -52,3 +53,11 @@ jobs:
           publish_branch: gh-pages
           user_name: github-actions[bot]
           user_email: github-actions[bot]@users.noreply.github.com
+
+      - name: Enable GitHub Pages
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh api -X POST "repos/${GITHUB_REPOSITORY}/pages" \
+            -f "source[branch]=gh-pages" -f "source[path]=/" || true
+          gh api "repos/${GITHUB_REPOSITORY}/pages" --jq '.html_url' || true
