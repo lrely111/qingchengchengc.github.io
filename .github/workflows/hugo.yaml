@@ -33,9 +33,16 @@ jobs:
           extended: true
 
       - name: Build
-        env:
-          BASE_URL: https://${{ github.repository_owner }}.github.io/
-        run: hugo --minify --baseURL "$BASE_URL"
+        run: |
+          OWNER="${GITHUB_REPOSITORY%%/*}"
+          REPO="${GITHUB_REPOSITORY##*/}"
+          if [ "$REPO" = "${OWNER}.github.io" ]; then
+            BASE_URL="https://${OWNER}.github.io/"
+          else
+            BASE_URL="https://${OWNER}.github.io/${REPO}/"
+          fi
+          echo "baseURL = ${BASE_URL}"
+          hugo --minify --baseURL "${BASE_URL}"
 
       - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v4
@@ -45,4 +52,3 @@ jobs:
           publish_branch: gh-pages
           user_name: github-actions[bot]
           user_email: github-actions[bot]@users.noreply.github.com
-          commit_message: "deploy: ${{ github.event.head_commit.message }}"
