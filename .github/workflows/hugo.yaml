@@ -25,8 +25,14 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          submodules: recursive
           fetch-depth: 0
+
+      # 主题在仓库里是 submodule（.gitmodules 有记录）；
+      # CI 里直接浅克隆一份，避免 submodule 提交号失效导致构建失败。
+      - name: Fetch PaperMod theme
+        run: |
+          rm -rf themes/PaperMod
+          git clone --depth 1 https://github.com/adityatelange/hugo-PaperMod.git themes/PaperMod
 
       - name: Setup Pages
         id: pages
@@ -43,7 +49,7 @@ jobs:
       - name: Build
         run: |
           hugo --minify --baseURL "${{ steps.pages.outputs.base_url }}/"
-          echo "built with baseURL=${{ steps.pages.outputs.base_url }}/"
+          echo "baseURL=${{ steps.pages.outputs.base_url }}/"
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
