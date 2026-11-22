@@ -58,6 +58,8 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          gh api -X POST "repos/${GITHUB_REPOSITORY}/pages" \
-            -f "source[branch]=gh-pages" -f "source[path]=/" || true
-          gh api "repos/${GITHUB_REPOSITORY}/pages" --jq '.html_url' || true
+          printf '{"source":{"branch":"gh-pages","path":"/"}}' > pages.json
+          gh api -X POST "repos/${GITHUB_REPOSITORY}/pages" --input pages.json \
+            || gh api -X PUT "repos/${GITHUB_REPOSITORY}/pages" --input pages.json \
+            || true
+          gh api "repos/${GITHUB_REPOSITORY}/pages" --jq '.html_url, .status' || true
